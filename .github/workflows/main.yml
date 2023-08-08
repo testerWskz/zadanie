@@ -16,7 +16,7 @@ jobs:
           # build: npm run build
           start: npm start
           browser: chrome
-      - name: Artifacts
+      - name: Artifacts Screenshot
         uses: actions/upload-artifact@v3
         # add the line below to store screenshots only on failures
         if: failure()
@@ -24,6 +24,7 @@ jobs:
           name: cypress-screenshots
           path: cypress/screenshots
           if-no-files-found: ignore # 'warn' or 'error' are also available, defaults to `warn`
+      - name: Artifacts Video
         uses: actions/upload-artifact@v3
         with:
           name: cypress-videos
