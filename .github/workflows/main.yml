@@ -26,6 +26,7 @@ jobs:
           if-no-files-found: ignore # 'warn' or 'error' are also available, defaults to `warn`
       - name: Artifacts Video
         uses: actions/upload-artifact@v3
+        if: failure()
         with:
           name: cypress-videos
           path: cypress/videos
