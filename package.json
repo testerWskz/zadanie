@@ -4,7 +4,9 @@
   "description": "Zadanie rekrutacyjne WSKZ.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./cypress/integration/api-tests/customers.spec.cy.js --exit"
+    "//test": "mocha ./cypress/integration/api-tests/customers.spec.cy.js --exit",
+    "start": "node app.js",
+    "test": "npm start & cypress run"
   },
   "keywords": [],
   "author": "Marcin Kebłesz",
